@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="row">
+
+    <% @news.each do |news| %>
+    <div class="col-lg-9">
+    <h2> <%= news.title %> </h2>
+    <p> <%= image_tag news.image_url.to_s%> </p>
+    <p> <%= news.description %> </p>
+    <p> <%= button_to 'Подробнее', '#',class: 'btn btn-default' %></p>
+      <hr>
+    </div>
+        <% end%>
+
+  </div>
+
+</div>
