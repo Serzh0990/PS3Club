@@ -20,7 +20,7 @@
     <%= f.text_area :description %>
   </div>
     <p>
-      <label>Картинка для новости.</label>
+      <label>Картинка для новости:</label>
       <%= image_tag(@news.image_url) if @news.image? %>
       <%= f.file_field :image %>
       <%= f.hidden_field :image_cache  %>
