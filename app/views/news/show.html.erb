@@ -1,19 +1,16 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
+<h2>
+  <strong><%= @news.title %></strong>
+</h2>
+<hr>
+  <p><%= image_tag (@news.image_url(:thumb)).to_s %></p>
 <p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @news.image %>
-</p>
-
-<p>
-  <strong>Description:</strong>
   <%= @news.description %>
 </p>
 
+
 <%= link_to 'Edit', edit_news_path(@news) %> |
 <%= link_to 'Back', news_index_path %>
+</div>

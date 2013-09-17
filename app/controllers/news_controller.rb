@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new , :create, :edit, :destroy]
 
   # GET /news
   # GET /news.json
@@ -14,7 +15,10 @@ class NewsController < ApplicationController
 
   # GET /news/new
   def new
+    if current_user.admin?
     @news = News.new
+  else redirect_to root_path
+  end
   end
 
   # GET /news/1/edit
