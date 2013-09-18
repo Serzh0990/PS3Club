@@ -4,11 +4,11 @@
 
     <% @news.each do |news| %>
     <div class="col-lg-12">
-    <h2> <%= news.title %> </h2>
-    <p> <%= image_tag news.image_url(:thumb).to_s%> </p>
-    <p> <%= news.description %> </p>
-	    <p> <%= link_to 'Подробнее', news_path(news.id),class: 'btn btn-default' %></p>
-		<p><muted>Добавлено: <%= news.created_at %></muted></p>
+    <h3 class ="text-center"> <%= news.title %> </h3><br>
+    <p class="text-center"> <%= image_tag news.image_url(:thumb).to_s, class: "img-rounded"%> </p><br>
+    <p class="text-center"> <%= news.description %> </p>
+	    <p class="text-left"> <%= link_to 'Подробнее', news_path(news.id),class: 'btn btn-default' %></p>
+		<p class = "text-muted"><small>Добавлено: <%= news.created_at %></small></p>
       <hr>
     </div>
         <% end%>

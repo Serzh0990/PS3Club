@@ -11,6 +11,7 @@
 </p>
 
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%= link_to 'Edit', edit_news_path(@news) if current_user.try(:admin) %> 
+<%= link_to 'Destroy', @news , method: :delete, data: {confirm: "Удалить эту новость?"} if current_user.try(:admin)%>
+<%= link_to 'Back', news_index_path,class: "btn btn-default" %>
 </div>
