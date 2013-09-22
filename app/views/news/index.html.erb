@@ -1,18 +1,21 @@
 <div class="container">
 
   <div class="row">
-
+<hr>
     <% @news.each do |news| %>
-    <div class="col-lg-12">
-    <h3 class ="text-center"> <%= news.title %> </h3><br>
+	<div class="col-lg-12">
+		<div class="well">
+    <h4 class ="text-center lead"> <%= news.title %> </h4>
     <p class="text-center"> <%= image_tag news.image_url(:thumb).to_s, class: "img-rounded"%> </p><br>
-    <p class="text-center"> <%= news.description %> </p>
-	    <p class="text-left"> <%= link_to 'Подробнее', news_path(news.id),class: 'btn btn-default' %></p>
-		<p class = "text-muted"><small>Добавлено: <%= news.created_at %></small></p>
+    <p class="text-center"> <%= truncate(news.description,length:700, omission: (".....")) %> </p>
+	    <p class="text-left"> <%= link_to 'Подробнее', news_path(news),class: 'btn btn-default' %></p>
+		<p> <%= link_to 'Редактировать', edit_news_path(news), class: 'btn btn-warning btn-xs' if current_user.try(:admin)%></p>
+		<p class="text-center"><small><span class="label label-success">Добавлено <%= news.created_at.strftime("%d %B %Y , в %H : %M") %></small></p>
+		</div>
+		</div>
       <hr>
-    </div>
         <% end%>
 
   </div>
 
-</div>
+<%= will_paginate @news%>

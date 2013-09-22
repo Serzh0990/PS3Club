@@ -1,4 +1,6 @@
 <div class = "container">
+<p class = "lead">Добавить новость</p>
+<hr>
 <%= form_for @news, :html => {:multipart => true} do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
@@ -13,17 +15,16 @@
   <% end %>
 <div class="row">
   <div class="col-lg-4">
-    <%= f.label :title %><br>
+    <%= f.label "Заголовок" %><br>
     <%= f.text_field :title , class: "form-control"%>
   </div>
   <div class="col-lg-10">
-    <%= f.label :description %><br>
+    <%= f.label "Текст для новости" %><br>
     <%= f.text_area :description, class: "form-control", rows: 5 %>
   </div>
     <p>
       <div class = "col-lg-10">
-	<label>Изображение для новости
-      <%= image_tag(@news.image_url(:thumb)) if @news.image? %>
+	<label>Добавить изображение
       <%= f.file_field :image %>
       <%= f.hidden_field :image_cache  %>
       </div>

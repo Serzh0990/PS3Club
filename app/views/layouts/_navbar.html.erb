@@ -20,7 +20,7 @@
          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email%> <b class="caret"></b></a>
           <ul class="dropdown-menu">
 		 <li><%= link_to "Выход", destroy_user_session_path , method: :delete%></li>
-		 <li> <%= link_to "Профиль", edit_user_registration_path %>
+		 <li> <%= link_to "Аккаунт", edit_user_registration_path %>
 		 <% else %>
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Профиль<b class="caret"></b></a>
           <ul class="dropdown-menu">

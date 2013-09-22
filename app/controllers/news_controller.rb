@@ -5,7 +5,7 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-    @news = News.all
+    @news = News.paginate(:page => params[:page],:per_page => 10)
   end
 
   # GET /news/1
@@ -23,6 +23,9 @@ class NewsController < ApplicationController
 
   # GET /news/1/edit
   def edit
+    if current_user.admin?
+    else redirect_to root_path
+    end
   end
 
   # POST /news
@@ -58,7 +61,11 @@ class NewsController < ApplicationController
   # DELETE /news/1
   # DELETE /news/1.json
   def destroy
+    if current_user.admin?
     @news.destroy
+  else
+    redirect_to root_path
+  end
     respond_to do |format|
       format.html { redirect_to news_index_url }
       format.json { head :no_content }

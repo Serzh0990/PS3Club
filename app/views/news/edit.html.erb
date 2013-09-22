@@ -1,6 +1,9 @@
-<h1>Editing news</h1>
+<p class="lead">Редактировать новость</p>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @news %> |
-<%= link_to 'Back', news_index_path %>
+<p></p>
+<%= link_to 'Назад', news_index_path, class: 'btn btn-default' %>
+<br>
+<hr>
+<%= link_to 'Удалить', @news , method: :delete, data: {confirm: "Удалить эту новость?"},class: 'btn btn-danger btn-sm' if current_user.try(:admin)%></br>
+<i class = "text-muted"> Удалить новость <i></p>

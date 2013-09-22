@@ -1,10 +1,10 @@
 <div class="sharedlinks">
 <%- if controller_name != 'sessions' %>
-  <p class = "text-muted"> Уже есть аккаунт? <%= link_to "Sign in", new_session_path(resource_name) %><br />
+  <p class = "text-muted"> Уже есть аккаунт? <%= link_to "Войти", new_session_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <p class="text-muted">Присоединяйся! <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+  <p class="text-muted">Присоединяйся! <%= link_to "Регистрация", new_registration_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
