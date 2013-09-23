@@ -1,35 +1,16 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-   <div class="container">
-     <div class="navbar-header">
-       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </button>
-       <a class="navbar-brand" href='/'>PS3 Club</a>
-     </div>
-     <div class="navbar-collapse collapse">
-       <ul class="nav navbar-nav">
-         <li class="active"><%= link_to "Главная", root_path%> </li>
-		<li> <%= link_to 'Новости', pages_infos_path %>
-         <li> <%= link_to "Добавить новость", new_news_path if current_user.try(:admin) %></li>
-         <li><%= link_to "О Нас" , pages_about_path %> </li>
-         <li><%= link_to "Контакты" , pages_contacts_path %></li>
-		
-		<li class="dropdown">	
-		<% if user_signed_in? %>	
-         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email%> <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-		 <li><%= link_to "Выход", destroy_user_session_path , method: :delete%></li>
-		 <li> <%= link_to "Аккаунт", edit_user_registration_path %>
-		 <% else %>
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Профиль<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-		 <li> <%= link_to "Вход", new_user_session_path %></li>
-		 <li> <%= link_to "Зарегестрироваться", new_user_registration_path %></li>
-         <% end %>
-		</ul>
-		</li>
-     </div>
-   </div>
+<div class="masthead">
+	<div class ="container">
+   <div class = "headdi"> <div class = "mbanner"><%= image_tag('main_banner.png')%></div></div>
 </div>
+    <ul class="nav nav-justified">
+      <li class="active"><%=link_to "Главная", root_path%></a></li>
+      <li><%= link_to 'О нас' , pages_about_path %></li>
+      <li><%= link_to 'Контакты' , pages_contacts_path %></li>
+<% if user_signed_in? %>
+      <li><%= link_to 'Добавить новость', new_news_path if current_user.try(:admin)%></li>
+      <li><%= link_to current_user.email , edit_user_registration_path(current_user)%></a></li>
+      <li><%= link_to 'Выйти', destroy_user_session_path , method: :delete%></li>
+<%else%>
+	<li> <%= link_to 'Войти', new_user_session_path %></li>
+	</div>
+<%end%>

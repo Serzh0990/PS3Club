@@ -1,7 +1,9 @@
-<div class="container text-center">
+<div class="container">
+	<div class = 'col-md-8'>
 <p class = "lead">
   <%= @news.title %>
 </p>
+ <p class="text-muted"><%= @news.created_at.strftime('%d %b %Y %H:%M') %></p>
 <hr>
   <p><%= image_tag (@news.image_url(:show)).to_s , class: 'img img-rounded'%></p>
 <p>
@@ -11,4 +13,5 @@
 <%= link_to 'Удалить', @news, method: :delete, data: {confirm: "Удалить эту новость?"},class: 'btn btn-danger' if current_user.try(:admin)%>
 <%= link_to 'Редактировать', edit_news_path(@news),class: 'btn btn-warning' if current_user.try(:admin) %> 
 <%= link_to 'Назад', news_index_path,class: "btn btn-default" %>
+</div>
 </div>

@@ -14,8 +14,20 @@
 
 @import "bootstrap.css";
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+     background: url('gtavhunt.jpg');
+     background-size: 1440px 900px;
+    background-repeat:no-repeat;
+	display: compact;
+     font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+ .wellmodify {
+	background: #FFFFFF;
+	font-family:'PT Sans', sans-serif;
+	font-size: 1.2em;
+	border-collapse:separate;
+	border-spacing: 2px;
+	border-color:gray;
+	
+	}
 }
 
 footer {
@@ -28,5 +40,19 @@ text-align: center;
 
 .newsed {
 	background-color: #eee;
+}
+
+.well {
+	margin: -18px;
+	.news-image {
+	text-align: center;
+	}
+	
+	.img-news {
+		margin: -2px;
+		overflow:hidden;
+		height:166px;
+		width:250px;
+	}
 }
 

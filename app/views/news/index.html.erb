@@ -1,19 +1,18 @@
-<div class="container">
-  <div class="row">
+  <div class="row">	
     <% @news.each do |news| %>
-	<div class="col-md-4">
-		<div class="thumbnail">
-		    <%= image_tag news.image_url(:thumb).to_s, class: "img-rounded"%>	
-		<div class= 'caption'>
-    <h5 class = "label label-success"> <%= truncate news.title, length: 39 %> </h5>
-    <small><%= truncate(news.description,length:56, omission: ("...")) %></small>
-	    <p> <%= link_to 'Подробнее', news_path(news),class: 'btn btn-primary' %>
-		 <%= link_to 'Редактировать', edit_news_path(news), class: 'btn btn-warning btn-xs' if current_user.try(:admin)%>
-		</div>
-		</div>
+	<div class="col-md-12 myclass">
+		    <div class = "col-sm-4 img-news"><%= image_tag news.image_url(:thumb).to_s , class: 'img-responsive'%></div>
+		
+			<p class = "text-muted small"><%= news.created_at.strftime('%d %b %Y %H:%M')%></p>
+				
+    <p> <%= link_to (truncate news.title),news , class: 'text-primary'%> </p>
+    <small><%= truncate(news.description,length:300, omission: ("...")) %></small>
+		 <p><%= link_to 'Редактировать', edit_news_path(news), class: 'text-warning' if current_user.try(:admin)%>
+		<p class = "text-right"> <%= link_to 'Читать полностью', news_path(news),class: 'text-primary' %>
+			<hr>
 		</div>
         <% end%>
+</div>
 
-  </div>
 
 <%= will_paginate @news, class: 'apple_pagination'%>
