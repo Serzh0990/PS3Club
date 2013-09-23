@@ -4,13 +4,14 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'devise'
 gem 'will_paginate'
-gem 'bootstrap-wysihtml5-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -49,3 +50,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
