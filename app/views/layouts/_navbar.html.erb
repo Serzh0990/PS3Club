@@ -11,6 +11,7 @@
      <div class="navbar-collapse collapse">
        <ul class="nav navbar-nav">
          <li class="active"><%= link_to "Главная", root_path%> </li>
+		<li> <%= link_to 'Новости', pages_infos_path %>
          <li> <%= link_to "Добавить новость", new_news_path if current_user.try(:admin) %></li>
          <li><%= link_to "О Нас" , pages_about_path %> </li>
          <li><%= link_to "Контакты" , pages_contacts_path %></li>

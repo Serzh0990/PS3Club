@@ -1,0 +1,44 @@
+.jumbotron {
+	background: #464646;
+	color: #fff;
+	h1{
+		text-shadow: (#000 1px 5px 10px);
+	color: #F5821F;
+	}
+	.btn-primary {
+		padding: 15px;
+		font-size: 1.2em;
+	}
+}
+
+.thumbnail{
+ border-radius: 10px;
+ background:#55626B;
+ margin:0px;
+ padding: -20px;
+ .caption{
+  position:relative;
+  color:#ccc9c9;
+  h5{
+   position:absolute;
+   top:-202px;
+   left:-20px;
+   font-size:1.5em;
+   color:#fff;
+   text-shadow:(#000 1px 5px 10px);
+  }
+ }
+.newsdesc {
+	color:#fff;
+}
+}
+
+
+
+footer {
+	padding: 20px;
+	margin-top: 30px;
+	border-radius: (10px 10px 0 0);
+	color: #fff;
+	background: #464646;
+}

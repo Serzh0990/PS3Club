@@ -5,4 +5,8 @@ class PagesController < ApplicationController
 
   def contacts
   end
+  
+  def infos
+    @news = News.paginate(:page => params[:page],:per_page => 10)
+  end
 end

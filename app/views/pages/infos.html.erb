@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="panel panel-default">
+		<div class = "panel-heading">Последние новости </div>
+	  <div class="row">
+<div class = "panel-body">
+    <% @news.each do |news| %>
+	<div class="col-lg-12">
+		<div class="well">
+    <h4 class ="text-center lead"> <%= news.title %> </h4>
+    <p class="text-center"> <%= image_tag news.image_url(:show).to_s, class: "img-rounded"%> </p><br>
+    <p class="text-center"> <%= truncate(news.description,length:700, omission: (".....")) %> </p>
+	    <p class="text-left"> <%= link_to 'Подробнее', news_path(news),class: 'btn btn-primary btn-lg' %></p>
+		<p> <%= link_to 'Редактировать', edit_news_path(news), class: 'btn btn-warning btn-xs' if current_user.try(:admin)%></p>
+		<p class="text-center"><small><span class="label label-success">Добавлено <%= news.created_at.strftime("%d %B %Y , в %H : %M") %></small></p>
+		</div>
+		</div>
+        <% end%>
+</div>
+	</div>
+
+  </div>
+
+	
+<%= will_paginate @news, class: "apple_pagination"%>

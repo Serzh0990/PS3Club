@@ -2,6 +2,7 @@ MyAppV40::Application.routes.draw do
   devise_for :users
   get "pages/about"
   get "pages/contacts"
+  get "pages/infos"
   resources :news
   
   # The priority is based upon order of creation: first created -> highest priority.
