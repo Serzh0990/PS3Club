@@ -1,14 +1,14 @@
   <div class="row">	
     <% @news.each do |news| %>
-	<div class="col-md-12 myclass">
-		    <div class = "col-sm-4 img-news"><%= image_tag news.image_url(:thumb).to_s , class: 'img-responsive'%></div>
+	<div class="col-md-12 col-lg-12 col-xs-12">
+		    <div class = "col-lg-3 col-md-4"><%=link_to (image_tag news.image_url(:thumb).to_s,class: 'imageClip'), news %></div>
 		
 			<p class = "text-muted small"><%= news.created_at.strftime('%d %b %Y %H:%M')%></p>
 				
-    <p> <%= link_to (truncate news.title),news , class: 'text-primary'%> </p>
-    <small><%= truncate(news.description,length:300, omission: ("...")) %></small>
+     <%= link_to (truncate news.title),news , class: 'news-name'%> </p>
+    <span class ="news-text"><%= truncate(news.description,length:300, omission: ("...")) %></span>
 		 <p><%= link_to 'Редактировать', edit_news_path(news), class: 'text-warning' if current_user.try(:admin)%>
-		<p class = "text-right"> <%= link_to 'Читать полностью', news_path(news),class: 'text-primary' %>
+		<p class = "text-right"> <%= link_to 'Читать полностью', news_path(news),class: 'news-read-more' %>
 			<hr>
 		</div>
         <% end%>

@@ -1,17 +1,14 @@
-<div class="masthead">
-	<div class ="container">
-   <div class = "headdi"> <div class = "mbanner"><%= image_tag('main_banner.png')%></div></div>
-</div>
-    <ul class="nav nav-justified">
-      <li class="active"><%=link_to "Главная", root_path%></a></li>
+
+    <ul class ="menunav">
+      <li><%=link_to "Главная", root_path%></a></li>
       <li><%= link_to 'О нас' , pages_about_path %></li>
       <li><%= link_to 'Контакты' , pages_contacts_path %></li>
- 	  <li><%= link_to 'Добавить новость', new_news_path if current_user.try(:admin)%></li>
 <% if user_signed_in? %>
+	  <li><%= link_to 'Добавить новость', new_news_path if current_user.try(:admin)%></li>
       <li><%= link_to current_user.email , edit_user_registration_path(current_user)%></a></li>
       <li><%= link_to 'Выйти', destroy_user_session_path , method: :delete%></li>
 <%else%>
-	<li> <%= link_to 'Войти', new_user_session_path %></li>
+	<li> <%= link_to 'Вход', new_user_session_path %></li>
 	<li> <%= link_to 'Регистрация', new_user_registration_path %></li>
-	</div>
+	</ul>
 <%end%>
