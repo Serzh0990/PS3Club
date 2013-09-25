@@ -5,6 +5,7 @@ gem 'rmagick'
 gem 'devise'
 gem 'will_paginate'
 gem 'fog'
+gem 'aws-sdk'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
