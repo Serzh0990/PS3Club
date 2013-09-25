@@ -17,6 +17,6 @@ CarrierWave.configure do |config|
   end
   config.cache_dir = "#{Rails.root}/tmp/ps3club"
   config.fog_directory  = ENV['images']                    # required
-  config.s3_access_policy    = :public_read                               # optional, defaults to true
+  config.fog_public = true                               # optional, defaults to true
  # config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
 end
