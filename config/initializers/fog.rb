@@ -8,7 +8,7 @@ CarrierWave.configure do |config|
     #:endpoint               => 'https://s3.example.com:8080' # optional, defaults to nil
   }
   
-  if Rails.env.test || Rails.env.cucumber?
+  if Rails.env.test? || Rails.env.cucumber?
     config.storage = :file
     config.enable_processing = false
     config.root = "#{Rails.root}/tmp"
