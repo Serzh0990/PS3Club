@@ -1,4 +1,7 @@
   <div class="row">	
+	<div class = "panel panel-info">
+		<div class = "panel-heading lead">Новости</div>
+		<div class = "panel-body">
     <% @news.each do |news| %>
 	<div class="col-md-12 col-lg-12 col-xs-12">
 		    <div class = "col-lg-3 col-md-4"><%=link_to (image_tag news.image_url(:thumb).to_s,class: 'imageClip'), news %></div>
@@ -16,3 +19,5 @@
 
 
 <%= will_paginate @news, class: 'apple_pagination'%>
+</div>
+</div>

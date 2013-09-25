@@ -20,15 +20,10 @@
 	<%= image_tag('header_bg.png',class: 'banner')%>
 	</div>
 <%= render 'layouts/navbar.html.erb' %>
-</div>
-<div class = "container">
 <%= render 'layouts/jumbotron.html.erb' %>
-</div>
+<%= render 'layouts/items.html.erb'%>
 <%= render 'layouts/alerts.html.erb' %>
-    <div class="container">
-	<div class = "well well-sm">
 <%= yield %>
-</div>
 </div>
 <div class="container">
 <%= render 'layouts/footer.html.erb'%>
