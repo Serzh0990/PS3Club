@@ -17,8 +17,10 @@
 <body>
 	<div class = "container">
 		<div class = "main-banner">
-	<%= link_to (image_tag('main_banner.png')) ,root_path %>
-	</div>
+	<span class ="my-banner"><%= link_to (image_tag('main_banner.png')) ,root_path %></span>
+		<span class = 'pull-left ps-banner'><%= link_to (image_tag('ps3club.jpg', width:130))%></span>
+		<span class = "addr-banner"> <%= link_to (image_tag('addr-banner.png',width:160)),pages_contacts_path%></span>
+		</div>
 	<div class="header-banner">
 	<%= image_tag('header_bg.png',class: 'banner')%>
 	</div>
