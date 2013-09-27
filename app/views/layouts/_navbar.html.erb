@@ -1,17 +1,33 @@
-<div class = "row">
-	<div class = "col-lg-10 col-md-9 col-xs-8">
-    <ul class ="menunav">
-      <li><%=link_to "Главная", root_path%></a></li>
-      <li><%= link_to 'О нас' , pages_about_path %></li>
-      <li><%= link_to 'Контакты' , pages_contacts_path %></li>
-<% if user_signed_in? %>
-	  <li><%= link_to 'Добавить новость', new_news_path if current_user.try(:admin)%></li>
-      <li><%= link_to current_user.email , edit_user_registration_path(current_user)%></a></li>
-      <li><%= link_to 'Выйти', destroy_user_session_path , method: :delete%></li>
-<%else%>
-	<li class = 'pull-right menu-btn'> <%= link_to 'Вход', new_user_session_path, class: 'btn btn-primary' %></li>
-	<li class = 'pull-right menu-btn'> <%= link_to 'Регистрация', new_user_registration_path, class: 'btn btn-primary' %></li>
-<%end%>
-</ul>
-</div>
-</div>
+<div class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <%= link_to 'PS3Club', root_path, class: 'navbar-brand'%>
+                  </div>
+                  <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                      <li><%= link_to 'Главная', root_path %></li>
+					  <li> <%=link_to 'Новости', news_index_path%>
+                      <li><%= link_to 'О нас', pages_about_path %></li>
+					  <li><%= link_to 'Контакты' , pages_contacts_path %></li>
+					<% if user_signed_in?%>
+					  <li> <%= link_to 'Добавить новость' , new_news_path if current_user.try(:admin?)%></li>
+					  
+                          <li><%= link_to current_user.email , edit_user_registration_path(current_user)%></li>
+                          <li><%= link_to 'Выйти', destroy_user_session_path , method: :delete%></li>
+						 <% else %>
+                          <li><%= link_to 'Вход', new_user_session_path %></li>
+						 <li> <%= link_to 'Регистрация', new_user_registration_path %> </li>
+						<%end%>
+						</ul>
+                    
+                    
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div><!-- /.container -->
+              </div><!-- /.navbar -->

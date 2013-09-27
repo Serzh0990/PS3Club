@@ -6,9 +6,8 @@ class NewsController < ApplicationController
   # GET /news.json
   def index
     @news = News.paginate(:page => params[:page],:per_page => 9)
-    @news_limit = News.limit(3)
   end
-
+  
   # GET /news/1
   # GET /news/1.json
   def show
@@ -36,8 +35,8 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'News was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @news }
+        format.html { redirect_to @news, success: 'News was successfully created.' }
+        format.json { render action: 'index', status: :created, location: @news }
       else
         format.html { render action: 'new' }
         format.json { render json: @news.errors, status: :unprocessable_entity }
@@ -50,7 +49,7 @@ class NewsController < ApplicationController
   def update
     respond_to do |format|
       if @news.update(news_params)
-        format.html { redirect_to @news, notice: 'News was successfully updated.' }
+        format.html { redirect_to @news, success: 'News was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
