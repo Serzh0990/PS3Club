@@ -3,6 +3,7 @@ MyAppV40::Application.routes.draw do
   get "pages/about"
   get "pages/contacts"
   get "pages/infos"
+  get "pages/gallery"
   resources :news
   
   # The priority is based upon order of creation: first created -> highest priority.

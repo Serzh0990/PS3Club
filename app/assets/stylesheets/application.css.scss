@@ -22,60 +22,12 @@ body {
 		background-color: #1ABC9C;
 	}
 	
-	.well-sm {
-	background-color:#FFF;
-	}
-	.banner {
-	background-position:initial initial;
-	  background-repeat:repeat no-repeat;
-	  height:200px;
-	  left:0;
-	  margin:0 auto;
-	  width:100%;
-	padding-top:20px;
-	}
-
-	.menunav {
-		
-		  color:#53C6EE;
-		  float:left;
-		  font-family:'PT Sans', sans-serif;
-		  font-size:18px;
-		  list-style:none;
-		  margin:0;
-		  min-height:27px;
-		  padding:0;
-		  text-shadow:rgba(0, 0, 0, 0.746094) 0 1px;
-		  width:100%;
-		  position:relative;
-		  top:-33px;
-		  left:47px;
-		
-		li {
-			float:left;
-			padding:0 10px;
-			padding-left:0 !important;
-		}
-		a{
-			color:#53C6EE;
-			font-family:'PT Sans', sans-serif;
-			  font-size:18px;
-			  list-style:none;
-			  text-shadow:rgba(0, 0, 0, 0.746094) 0 1px;
-			margin:12px;
-			
-		}
-		
-		.menu-btn {
-			margin:-10px;
-			position:relative;
-			top: -20px;
-		}
-	}
 }
 
 footer {
   text-align: center;
+  background-color: #16A085;
+  padding-bottom:1px;
 }
 
 
@@ -84,6 +36,13 @@ footer {
 .imageClip {
 	width:240px;
 	height:140px;
+	overflow:hidden;
+}
+
+
+.imageClip-gallery {
+	width: 1125px;
+	height:800px;
 	overflow:hidden;
 }
 

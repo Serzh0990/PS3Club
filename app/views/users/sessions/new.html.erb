@@ -1,6 +1,9 @@
-<div class = "well">
-<p class="lead">Вход</p>
+<div class = 'row'>
 
+	<div class = 'col-lg-5'>
+		<div class = 'well'>
+<p class="lead">Вход</p>
+<div class = 'login-form'>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 <div class = "row">
   <div class = "col-md-5"><%= f.label :email %><br />
@@ -22,4 +25,7 @@
 </div>
 <p>
 <%= render "users/shared/links" %>
+</div>
+</div>
+</div>
 </div>
