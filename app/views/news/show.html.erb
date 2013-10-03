@@ -1,7 +1,7 @@
-	<div class = 'col-md-12'>
+	<div class = 'col-md-12 col-lg-12 col-xs-12'>
 		<div class = 'panel panel-success'>
 		<div class = 'panel-heading text-center'><%= @news.title%></div>
-		<div class = 'panel-body text-center'><%= image_tag (@news.image_url(:show)).to_s, class: 'img img-rounded'%>
+		<div class = 'panel-body text-center'><%= image_tag (@news.image_url(:show)).to_s, class: 'text-center img img-rounded img-responsive'%>
 			</br>
 			<p> <%= @news.description%> </p>
 				<%= link_to 'Удалить', @news, method: :delete, data: {confirm: "Удалить эту новость?"},class: 'btn btn-danger' if current_user.try(:admin)%>

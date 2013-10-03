@@ -21,13 +21,42 @@ body {
 	.jumbotron {
 		background-color: #1ABC9C;
 	}
+	.jum-modify{background-color: black;}
+	
+	.demo-browser {
+	background: #2c3e50 url(../images/demo/browser.png) 0 0 no-repeat;
+	background-size: 659px 42px;
+	color: #ffffff;
+	margin: 0 41px 140px 0;
+	padding-top: 42px;
+	border-radius: 0 0 6px 6px;
+	}
+	
+	.demo-browser-side {
+	float: left;
+	padding: 22px 20px;
+	width: 151px;
+	}
+	
+	.demo-browser-content {
+	background-color: #34495e;
+	overflow: hidden;
+	padding: 21px 0 0 20px;
+	border-radius: 0 0 6px;
+	img {
+	border: 6px solid #ffffff;
+	float: left;
+	margin: 0 15px 20px 0;
+	width: 146px;}
+	}
+	
 	
 }
 
 footer {
   text-align: center;
   background-color: #16A085;
-  padding-bottom:1px;
+  border-radius: 3px;
 }
 
 
@@ -45,6 +74,7 @@ footer {
 	height:800px;
 	overflow:hidden;
 }
+
 
 .news-text {
 	font-family:'PT Sans', sans-serif;
@@ -106,8 +136,6 @@ footer {
 	height:230px;
 	float:right;
 }
-
-
 
 
 

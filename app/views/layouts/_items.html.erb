@@ -1,22 +1,40 @@
 <div class = "row">
-<div class = "col-lg-4">
+	<div class = 'col-md-8 col-lg-8'>
+ <div class="demo-browser">
+            <div class="demo-browser-side">
+              <div class="demo-browser-author"></div>
+              <div class="demo-browser-action">
+                <%= link_to 'Галерея' , pages_gallery_path, class: 'btn btn-success btn-lg btn-block'%>
+              </div>
+              <h5>комнаты с уникальным дизайном</h5>
+              <h6>
+               VIP-зал с огромным экраном!
+              </h6>
+            </div>
+            <div class="demo-browser-content">
+              <%= image_tag('basket-room.jpg')%>
+              <%= image_tag('bike-room.jpg')%>
+              <%= image_tag('box-room.jpg')%>
+              <%= image_tag('auto-room.jpg')%>
+			  <%= image_tag('autograph-room.jpg')%>
+			<%= image_tag('vip-room.jpg')%>
+            </div>
+          </div>
+        </div>
+
+
+<div class = "col-lg-4 col-md-4">
 <div class = "panel panel-primary">
-<div class = "panel-heading text-center">Галерея игровых комнат</div>
-<div class = "panel-body"><%= link_to (image_tag 'basket-room.jpg', width: 160),pages_gallery_path %>
-<%= link_to (image_tag 'autograph-room.jpg', width: 160),pages_gallery_path%></div>
-<p class = "text-center"><%= link_to 'Перейти' , pages_gallery_path, class: 'btn btn-primary btn-sm'%></p>
+<div class = "panel-heading">Последние новости</div>
+<div class = "panel-body">
+
+<% @news.each do |news| %>
+	
+	<%= link_to (truncate news.title, length: 50), news, class: 'text-info' %>
+	<hr>
+	<%end%>
+	</div>
 </div>
 </div>
-<div class = "col-lg-4">
-<div class = "panel panel-primary">
-<div class = "panel-heading">Panel Heading</div>
-<div class = "panel-body">Panel body </div>
-</div>
-</div>
-<div class = "col-lg-4">
-<div class = "panel panel-primary">
-<div class = "panel-heading">Panel Heading</div>
-<div class = "panel-body">Panel body </div>
-</div>
-</div>
+
 </div>

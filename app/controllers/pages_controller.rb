@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   def about
-    @news_count = News.all.count
   end
 
   def contacts
   end
   
   def index
+    @news = News.limit(5) 
   end
 end
