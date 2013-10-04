@@ -1,11 +1,12 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new , :create, :edit, :destroy]
-
+  #before_filter :admin_validate, except: [:index, :show]
+  before_filter :authenticate_user! , except: [:index, :show]
+  
   # GET /news
   # GET /news.json
   def index
-    @news = News.paginate(:page => params[:page],:per_page => 5)
+    @news = News.paginate(:page => params[:page],:per_page => 5).order("id DESC")
   end
   
   # GET /news/1
@@ -35,7 +36,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to root_path, success: 'News was successfully created.' }
+        format.html { redirect_to news_index_path, success: 'News was successfully created.' }
         format.json { render action: 'index', status: :created, location: @news }
       else
         format.html { render action: 'new' }
@@ -65,12 +66,8 @@ class NewsController < ApplicationController
     @news.destroy
     redirect_to root_path, success: "News was successfully deleted."
   else
-    redirect_to root_path
+    render redirect_to root_path
   end
-    respond_to do |format|
-      format.html { redirect_to news_index_url }
-      format.json { head :no_content }
-    end
   end
 
   private
@@ -82,5 +79,13 @@ class NewsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
       params.require(:news).permit(:title, :image, :description)
+    end
+    
+    def admin_validate
+    if current_user.admin?
+    else
+      redirect_to root_path
+      render text: "Access Denied"
+    end
     end
 end

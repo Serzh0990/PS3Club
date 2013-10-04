@@ -4,5 +4,4 @@ class News < ActiveRecord::Base
   
   validates :title, :description, presence: true
   validates :title, uniqueness: true
-  default_scope order("id DESC")
 end

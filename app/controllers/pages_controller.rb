@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
   
   def index
-    @news = News.limit(5) 
+    @news = News.limit(5).order("id DESC") 
   end
 end
