@@ -11,7 +11,7 @@
 		
 			<p class = "text-muted small"><%= news.created_at.strftime('%d %b %Y %H:%M')%></p>
 				
-     <%= link_to (truncate news.title),news , class: 'news-name'%> </p>
+     <%= link_to (truncate news.title, length: 100),news , class: 'news-name'%> </p>
     <span class ="news-text"><%= truncate(news.description,length:300, omission: ("...")) %></span>
 		 <p><%= link_to 'Редактировать', edit_news_path(news), class: 'text-warning' if current_user.try(:admin)%>
 		<p class = "text-right"> <%= link_to 'Читать полностью', news_path(news),class: 'news-read-more' %>

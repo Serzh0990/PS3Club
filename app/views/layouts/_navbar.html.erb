@@ -16,7 +16,9 @@
 					  <li><%= link_to 'Контакты' , pages_contacts_path %></li>
 					<% if user_signed_in?%>
 					  <li> <%= link_to 'Добавить новость' , new_news_path if current_user.try(:admin?)%></li>
-					  
+					<li> <%= link_to 'Оставить пожелание', new_wish_path unless current_user.try(:admin) %></li>
+					<li> <%= link_to 'Пожелания', wishes_path if current_user.try(:admin)%></li>
+ 					  
                           <li><%= link_to current_user.email , edit_user_registration_path(current_user)%></li>
                           <li><%= link_to 'Выйти', destroy_user_session_path , method: :delete%></li>
 						 <% else %>

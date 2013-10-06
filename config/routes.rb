@@ -1,4 +1,5 @@
 MyAppV40::Application.routes.draw do
+  resources :wishes
   devise_for :users
   get "pages/about"
   get "pages/contacts"
