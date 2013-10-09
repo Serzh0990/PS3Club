@@ -31,7 +31,7 @@
 
 <% @news.each do |news| %>
 	
-	<%= link_to (truncate news.title, length: 50), news, class: 'text-info' %>
+	<%= link_to (truncate news.title, length: 50), news, class: 'text-info lastnews' %>
 	<hr>
 	<%end%>
 	</div>
