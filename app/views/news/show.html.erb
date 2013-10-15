@@ -4,7 +4,7 @@
 		<div class = 'panel-heading text-center'><%= @news.title%></div>
 		<div class = 'panel-body'><%= image_tag (@news.image_url(:show)).to_s, class: 'img img-rounded img-responsive imgshow'%>
 			</br>
-			<p> <%= @news.description%> </p>
+			<p> <%= raw @news.description%> </p>
 				<%= link_to 'Удалить', @news, method: :delete, data: {confirm: "Удалить эту новость?"},class: 'btn btn-danger' if current_user.try(:admin)%>
 				<%= link_to 'Редактировать', edit_news_path(@news),class: 'btn btn-warning' if current_user.try(:admin) %> 
 				<%= link_to 'Назад', news_index_path,class: "btn btn-default" %>

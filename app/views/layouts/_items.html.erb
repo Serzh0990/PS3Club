@@ -1,6 +1,6 @@
 <% cache @news do %>
 <div class = "row">
-	<div class = 'col-md-8 col-lg-8'>
+	<div class = 'col-md-8 col-lg-8 col-xs-8'>
  <div class="demo-browser">
             <div class="demo-browser-side">
               <div class="demo-browser-author"></div>
@@ -13,18 +13,18 @@
               </h6>
             </div>
             <div class="demo-browser-content">
-              <%= link_to image_tag('basket-room.jpg'), pages_gallery_path %>
-              <%= link_to image_tag('bike-room.jpg'), pages_gallery_path%>
-              <%= link_to image_tag('box-room.jpg'), pages_gallery_path%>
-              <%= link_to image_tag('auto-room.jpg'), pages_gallery_path%>
-			  <%= link_to image_tag('autograph-room.jpg'), pages_gallery_path%>
-			  <%= link_to image_tag('vip-room.jpg'),pages_gallery_path%>
+              <%= link_to image_tag('basket-room.jpg', class: 'img-responsive'), pages_gallery_path %>
+              <%= link_to image_tag('bike-room.jpg', class: 'img-responsive'), pages_gallery_path%>
+              <%= link_to image_tag('box-room.jpg', class: 'img-responsive'), pages_gallery_path%>
+              <%= link_to image_tag('auto-room.jpg', class: 'img-responsive'), pages_gallery_path%>
+			  <%= link_to image_tag('autograph-room.jpg', class: 'img-responsive'), pages_gallery_path%>
+			  <%= link_to image_tag('vip-room.jpg', class: 'img-responsive'),pages_gallery_path%>
             </div>
           </div>
         </div>
 
 
-<div class = "col-lg-4 col-md-4">
+<div class = "col-lg-4 col-md-4 col-xs-4">
 <div class = "panel panel-primary">
 <div class = "panel-heading">Последние новости</div>
 <div class = "panel-body">
