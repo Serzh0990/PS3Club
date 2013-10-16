@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<%= render 'layouts/google.html.erb'%>
   <title>PS3 Club</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,6 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= tinymce_assets %>
-  <%= render 'layouts/google.html.erb'%>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -20,6 +20,7 @@
 
 
   <%= csrf_meta_tags %>
+  <%= render 'layouts/google.html.erb'%>
 </head>
 <body>
 	<div class = "container">
@@ -28,6 +29,8 @@
 
 <%= render 'layouts/alerts' %>
 <%= yield %>
+<%= render 'layouts/google.html.erb'%>
+
 </div>
 <div class="container">
 <%= render 'layouts/footer'%>
