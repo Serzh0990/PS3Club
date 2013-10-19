@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<%= metamagic %>
+  
 	<%= render 'layouts/google.html.erb'%>
-  <title>PS3 Club</title>
+  <title><%= full_title(yield(:title))%></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= tinymce_assets %>
@@ -25,10 +28,10 @@
 </head>
 <body>
 	<div class = "container">
-		
+<%= render 'layouts/alerts' %>		
 <%= render 'layouts/navbar' %>
 
-<%= render 'layouts/alerts' %>
+
 <%= yield %>
 <%= render 'layouts/google.html.erb'%>
 

@@ -34,7 +34,8 @@ def create
   @wish = Wish.new(wish_params)
     respond_to do |format|
       if @wish.save
-        format.html { redirect_to root_path, success: 'Wish was successfully created.' }
+        flash[:success] = 'Спасибо Вам!Мы рассмотрим ваше пожелание!'
+        format.html { redirect_to root_path }
         format.json { render action: 'index', status: :created, location: @wish }
       else
         format.html { render action: 'new' }
@@ -58,7 +59,8 @@ end
 
 def destroy
     @wish.destroy
-    redirect_to root_path, success: "Wish was successfully deleted."
+    redirect_to root_path
+    flash[:success] = 'Пожелание удалено из списка!'
 end
 
 private

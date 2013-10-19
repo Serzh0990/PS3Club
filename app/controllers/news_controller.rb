@@ -10,6 +10,9 @@ class NewsController < ApplicationController
   # GET /news/1
   # GET /news/1.json
   def show
+    if request.path != news_path(@news)
+        redirect_to @news, status: :moved_permanently
+      end
   end
 
   # GET /news/new
@@ -34,7 +37,8 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to root_path, success: 'News was successfully created.' }
+        flash[:success]  = 'Новость успешно добавлена!'
+        format.html { redirect_to root_path }
         format.json { render action: 'index', status: :created, location: @news }
       else
         format.html { render action: 'new' }
@@ -48,7 +52,8 @@ class NewsController < ApplicationController
   def update
     respond_to do |format|
       if @news.update(news_params)
-        format.html { redirect_to root_path, success: 'News was successfully updated.' }
+        flash[:success] = 'Новость успешно обновлена!'
+        format.html { redirect_to root_path }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -62,20 +67,16 @@ class NewsController < ApplicationController
   def destroy
     if current_user.admin?
     @news.destroy
-    redirect_to root_path, success: "News was successfully deleted."
-  else
+    flash[:success] = 'Новость удалена!'
     redirect_to root_path
   end
-    respond_to do |format|
-      format.html { redirect_to news_index_url }
-      format.json { head :no_content }
-    end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_news
-      @news = News.find(params[:id])
+      @news = News.friendly.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

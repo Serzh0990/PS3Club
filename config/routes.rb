@@ -1,10 +1,10 @@
 MyAppV40::Application.routes.draw do
   resources :wishes
   devise_for :users
-  get "pages/about"
-  get "pages/contacts"
+  get "about", to: 'pages#about'
+  get "contacts", to: "pages#contacts"
   get "pages/infos"
-  get "pages/gallery"
+  get "gallery", to: "pages#gallery"
   resources :news
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -5,20 +5,23 @@
             <div class="demo-browser-side">
               <div class="demo-browser-author"></div>
               <div class="demo-browser-action">
-                <%= link_to 'Галерея' , pages_gallery_path, class: 'btn btn-success btn-lg btn-block'%>
+                <%= link_to 'Галерея' , gallery_path, class: 'btn btn-success btn-lg btn-block'%>
               </div>
               <h5>комнаты с уникальным дизайном</h5>
               <h6>
                VIP-зал с огромным экраном!
               </h6>
+			 <h6>
+               только в psclub харькова
+              </h6>
             </div>
             <div class="demo-browser-content">
-              <%= link_to image_tag('basket-room.jpg', class: 'img-responsive'), pages_gallery_path %>
-              <%= link_to image_tag('bike-room.jpg', class: 'img-responsive'), pages_gallery_path%>
-              <%= link_to image_tag('box-room.jpg', class: 'img-responsive'), pages_gallery_path%>
-              <%= link_to image_tag('auto-room.jpg', class: 'img-responsive'), pages_gallery_path%>
-			  <%= link_to image_tag('autograph-room.jpg', class: 'img-responsive'), pages_gallery_path%>
-			  <%= link_to image_tag('vip-room.jpg', class: 'img-responsive'),pages_gallery_path%>
+              <%= link_to image_tag('basket-room.jpg', class: 'img-responsive'), gallery_path %>
+              <%= link_to image_tag('bike-room.jpg', class: 'img-responsive'), gallery_path%>
+              <%= link_to image_tag('box-room.jpg', class: 'img-responsive'), gallery_path%>
+              <%= link_to image_tag('auto-room.jpg', class: 'img-responsive'), gallery_path%>
+			  <%= link_to image_tag('autograph-room.jpg', class: 'img-responsive'), gallery_path%>
+			  <%= link_to image_tag('vip-room.jpg', class: 'img-responsive'),gallery_path%>
             </div>
           </div>
         </div>
