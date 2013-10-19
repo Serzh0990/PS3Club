@@ -6,7 +6,7 @@
 				<p class = 'text-center'><%= @wish.text  %></p>
 				
 				<%= button_to 'Выполнено' , @wish, method: :delete, data: {confirm: "Вы действительно выполнили это пожелание?"},class: 'btn btn-success btn-sm'%></p>
-				<%= button_to 'Удалить' , @wish, method: :delete, data: {confirm: "Удалить эту новость?"},class: 'btn btn-danger btn-sm'%></p>
+				<%= button_to 'Удалить' , @wish, method: :delete, data: {confirm: "Удалить это пожелание?"},class: 'btn btn-danger btn-sm'%></p>
 				<%= link_to 'назад', wishes_path %>
 				</div>
 			</div>

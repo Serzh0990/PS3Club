@@ -8,7 +8,7 @@
 				<% @wishes.each do |wish| %>
 				<p class = 'text-muted'><%= wish.created_at.strftime('%d %b %Y %H:%M') %></p>
 				<%= link_to wish.title, wish%>
-				<span><%= button_to 'Выполнено' , @wish, method: :delete, data: {confirm: "Вы действительно выполнили это пожелание?"},class: 'btn btn-success btn-xs'%></span>
+				<span><%= button_to 'Выполнено' , wish, method: :delete, data: {confirm: "Вы действительно выполнили это пожелание?"},class: 'btn btn-success btn-xs'%></span>
 				<hr>
 				<% end %>
 				</div>

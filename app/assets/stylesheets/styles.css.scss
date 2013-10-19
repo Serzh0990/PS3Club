@@ -24,11 +24,14 @@ body {
 	}
 	.myh1 {
 		font-family: 'Jura', sans-serif;
-		font-size: 60px;
+		font-size: 60pt;
 		color: #fff;
 		padding-bottom: 40.24px;
 		text-align: center;
 		background-color: #2C3E50;
 		margin:0;
+		p {
+		font-size:15pt;
+		}
 		}
 }

@@ -59,10 +59,6 @@ end
 def destroy
     @wish.destroy
     redirect_to root_path, success: "Wish was successfully deleted."
-    respond_to do |format|
-      format.html { redirect_to root_path }
-      format.json { head :no_content }
-  end
 end
 
 private
