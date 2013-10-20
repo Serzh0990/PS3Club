@@ -9,7 +9,6 @@
     <% @news.each do |news| %>
 	<div class="col-md-12 col-lg-12 col-xs-12">
 		    <div class = "col-lg-3 col-md-4"><%=link_to (image_tag news.image_url(:thumb).to_s,class: 'imageClip'), news %></div>
-		<p><%= Date.today%> </p>
 			<p class = "text-muted small"><%= I18n.localize(news.created_at,:format => :short)%></p>
 				
      <%= link_to truncate(news.title, length: 100),news , class: 'news-name'%> </p>
