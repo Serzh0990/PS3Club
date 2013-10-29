@@ -1,5 +1,5 @@
 body {
-font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-family: 'PT Sans', sans-serif;
 font-size: 14px;
 line-height: 20px;
 color: #333;
@@ -9,7 +9,7 @@ color: #333;
 
 
 h1,h2,h3,h4,h5,h6 {
-font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-family: 'PT Sans', sans-serif;
 	font-size:13px;
 }
 

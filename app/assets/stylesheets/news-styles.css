@@ -3,7 +3,6 @@
 	margin: 10px;
 	margin-left: 70px;
 	float: left;
-	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 
 
@@ -20,7 +19,6 @@
 }
 .news_col p {
 	font-size: 16px;
-		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	
 }
 .news_col img:hover {
@@ -28,7 +26,6 @@
 }
 
 .news_show {
-	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 	background: #fff;
 	margin: 0 auto;
@@ -43,7 +40,6 @@
 }
 .news_show p {
 font-size : 18px !important;
-	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 .news_show img {
