@@ -19,7 +19,6 @@
 	font-size: 5em;
 	margin-top: 0;
 	padding-top: 100px;
-	font-variant: small-caps;
 	text-transform: uppercase;
 	-webkit-transition: color .1s linear;
 	-moz-transition: color .1s linear;
@@ -72,7 +71,7 @@
 }
 
 .side_index_col h2 {
-	font: small-caps 20px 'Cuprum';
+	font: 20px 'Cuprum';
 	}
 	
 	.side_index_col a {
@@ -97,7 +96,7 @@
 		
 	}
 	.index_content_col h2 {
-		font: small-caps 1.5em 'Cuprum';
+		font:  1.5em 'Cuprum';
 		margin: 2px;
 		text-transform: uppercase;
 	}
@@ -120,7 +119,6 @@
 	.index_content_col_down h2 {
 	font-family: 'Cuprum';
 	font-size: 2em;
-		font-variant: small-caps;
 		color: #333;
 		margin: 0;
 		padding: 0;
@@ -133,7 +131,6 @@
 		padding-bottom: 10px;
 		margin: 0;
 		font: 15px 'Cuprum';
-		font-variant: small-caps;
 		text-transform: uppercase;
 	}
 
@@ -159,7 +156,6 @@
 		margin: 0;
 		padding: 5px;
 		font-size: 17px;
-		font-variant: small-caps;
 		text-transform: lowercase;
 	}
 	.index_content_discount img {
@@ -186,7 +182,6 @@
 		margin: 0;
 		padding: 5px;
 		font-size: 17px;
-		font-variant: small-caps;
 		text-transform: lowercase;
 	}
 	.index_content_bottom img {
