@@ -46,7 +46,13 @@
          <li><%= link_to 'Новости' , news_index_path, class: 'icon-blog'%></li>
          <li><%= link_to 'О нас', about_path, class:'icon-rocket'%></li>
          <li><%= link_to 'Контакты', contacts_path, class: 'icon-location2' %></li>
-         <li><%= link_to 'Пожелание', new_wish_path, class: 'icon-envelop' %></li>
+         <% unless current_user.try(:admin?)%>
+         <li><%= link_to 'Пожелание', new_wish_path, class: 'icon-envelop'  %></li>
+         <%end%>
+         <% if current_user.try(:admin?) %>
+         <li><%= link_to 'Пожелание', wishes_path, class: 'icon-envelop' %></li>
+         <%end%>
+         
                     </ul>
                </div><!--/.nav-collapse -->
      </div>
