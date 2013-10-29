@@ -8,9 +8,12 @@
 
 .news_col h2 {
 	font-size: 18px;
+	font-family: 'Cuprum';
 }
 .news_col h4 {
 	font-size: 20px;
+		font-family: 'Cuprum';
+	
 }
 .news_col img {
 	
@@ -25,12 +28,15 @@
 	padding:  20px;
 	margin-top: 15px;
 	text-align: center;
+	
 }
 .news_show h2 {
 	font-size: 22px;
 	text-align: left;
+	font-family: 'Cuprum';
 }
 .news_show p {
+font-family:  'Cuprum' !important;
 font-size : 15px;
 }
 .news_show img {
