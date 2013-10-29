@@ -49,7 +49,7 @@
   text-align: center;
 }
 .ca-main{
-    font-size: 19px !important ;
+    font-size: 16px !important ;
     -webkit-transition: all 300ms linear;
     -moz-transition: all 300ms linear;
     -o-transition: all 300ms linear;
@@ -58,7 +58,7 @@
     
 }
 .ca-sub{
-    font-size: 14px !important;
+    font-size: 12px !important;
     font-weight: 100;
     color: #666;
     -webkit-transition: all 300ms linear;
