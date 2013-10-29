@@ -18,6 +18,10 @@
 .news_col img {
 	
 }
+.news_col p {
+	font-family: 'Cuprum';
+	font-size: 16px;
+}
 .news_col img:hover {
 	opacity: 0.7;
 }
@@ -37,7 +41,7 @@
 }
 .news_show p {
 font-family:  'Cuprum' !important;
-font-size : 15px;
+font-size : 18px !important;
 }
 .news_show img {
 	margin: auto;

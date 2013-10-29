@@ -71,7 +71,8 @@
 }
 
 .side_index_col h2 {
-	font: 20px 'Cuprum';
+font-family: 'Cuprum';
+font-size: 20px;
 	}
 	
 	.side_index_col a {
