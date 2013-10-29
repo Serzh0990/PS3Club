@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019193455) do
+ActiveRecord::Schema.define(version: 20131027084005) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20131019193455) do
   end
 
   add_index "news", ["slug"], name: "index_news_on_slug"
+
+  create_table "prices", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

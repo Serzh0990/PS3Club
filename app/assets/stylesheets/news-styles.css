@@ -1,0 +1,38 @@
+.news_col {
+	background: #fff;
+	margin: 10px;
+	margin-left: 70px;
+	float: left;
+	}
+
+
+.news_col h2 {
+	font-size: 18px;
+}
+.news_col h4 {
+	font-size: 20px;
+}
+.news_col img {
+	
+}
+.news_col img:hover {
+	opacity: 0.7;
+}
+
+.news_show {
+	background: #fff;
+	margin: 0 auto;
+	padding:  20px;
+	margin-top: 15px;
+	text-align: center;
+}
+.news_show h2 {
+	font-size: 22px;
+	text-align: left;
+}
+.news_show p {
+	font-variant: small-caps;
+}
+.news_show img {
+	margin: auto;
+}

@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cuprum'), local('Cuprum-Regular'), url(http://themes.googleusercontent.com/static/fonts/cuprum/v4/_8eDwXzPxQAsab4bYS-fzuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cuprum Bold'), local('Cuprum-Bold'), url(http://themes.googleusercontent.com/static/fonts/cuprum/v4/n3IzcUkIerri6e9sz7DgbrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/RjgO7rYTmqiVp7vzi-Q5UbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzAcuEIXEaFWBWXA4NoGd_Oo.woff) format('woff');
+}
+
+
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url('websymbols-regular-webfont.eot');
+    src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('websymbols-regular-webfont.woff') format('woff'),
+         url('websymbols-regular-webfont.ttf') format('truetype'),
+         url('websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

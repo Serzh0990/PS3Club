@@ -1,0 +1,38 @@
+<div class = 'col-lg-3 col-sm-6 col-xs-12 col-md-6 side_index_col'>
+<h2>Последние новости</h2>
+<ul class = 'ca-menu'>
+
+<% @news.each do |news| %>
+
+<li>
+ <span class='ca-icon'>A</span>
+ <%= link_to '', news%>
+
+ <div class = 'ca-content'>	
+ <h2 class='ca-main'><%= truncate news.title, length: 30 %></h2>
+ <h5 class='ca-sub'><%= truncate(strip_tags(news.description), length: 100) %></h5>
+</div>
+
+</li>
+<%end%>
+
+</ul>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?101"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "350", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 60183195);
+</script>
+<div class= 'side_login'>
+<% if user_signed_in? %>
+<h2 class="text-center">Добро пожаловать</h2>
+<h3 class="text-center">Вы вошли как <strong><%= link_to current_user.email, user_registration_path%></strong></h3>
+<h3 class = 'text-center'><%= link_to 'Изменить цены', prices_path if current_user.admin?%></h3>
+<h3 class = 'text-center'><%= link_to 'Выйти' , destroy_user_session_path , :method => :delete if user_signed_in?%></h3>
+
+<% else %>
+<p class="text-center"><%= link_to 'Вход', new_user_session_path%></p>
+<%end%>
+</div>
+</div>

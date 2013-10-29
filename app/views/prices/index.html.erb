@@ -1,0 +1,10 @@
+
+<% @prices.each do |pr| %>
+<div class = 'col-md-3 col-sm-3 col-xs-3 col-lg-3 price_col'>
+<h5><%= pr.title%></h5>
+<p><%= pr.description %></p>
+<p><%= pr.cost %>грн\час </p>
+<p> <%= link_to 'Редактировать', edit_price_path(pr) %></p>
+</div>
+
+<% end %>

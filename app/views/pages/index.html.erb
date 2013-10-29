@@ -3,8 +3,131 @@ meta :title => "Playstation3 club Харьков",
      :description => "Первый в харькове psclub ",
      :keywords => %w(ps3club psclub харьков)
 %>
-<%= render 'layouts/google.html.erb'%>
-<%= render 'layouts/header'%>
-<%= render 'layouts/jumbotron' %>
-<%= render 'layouts/items'%>
-<%= render 'layouts/photos'%>
+<%= render 'layouts/google.html.erb' %>
+
+<div class = 'row'>
+<div class = 'col-md-12 col-sm-12 col-lg-12  main_index_col'>
+<h1>Playstation3 Club </h1>
+<h2>Так вы еще не отдыхали</h2>
+</div>
+
+<%= render 'layouts/side_col'%>
+
+<div class = 'col-lg-9 col-sm-6 col-xs-12 col-md-6 index_content_col'>
+<span class = 'websymbol'>h</span><h2>Самые новые игры</h2>
+<h3>У нас доступно более 200 игр в которые вы можете поиграть.</h3>
+
+<div class="view view-tenth">
+                <%= image_tag('bg.jpg',class: 'img-responsive')%>
+                <div class="mask">
+                    <h2>GTA V: Уже у нас</h2>
+                    <p>Хит года!У нас вы можете играть в online! Игра Grand Theft Auto 5 установлена на каждой приставке.
+                    </p>
+                </div>
+            </div>
+            <div class="view view-tenth">
+				<%= image_tag('ufc3.jpg') %>
+                <div class="mask">
+                    <h2>UFC 3</h2>
+                    <p>Участвуйте в поединках на восьмиугольной арене, наслаждаясь новыми точками обзора, уникальными выходами спортсменов и богатыми онлайновыми возможностями.</p>
+                </div>
+            </div>
+            <div class="view view-tenth">
+            	<%= image_tag('pes13.jpg') %>
+                <div class="mask">
+                    <h2>PES 13</h2>
+                    <p>FullControl — обеспечивает полную свободу перемещения по виртуальному футбольному полю, возможность варьировать стиль первого касания и «вручную» управлять передачей мяча и... </p>
+                </div>
+            </div>
+            
+</div>
+
+<div class = 'col-lg-9 col-sm-10 col-xs-10	 col-md-10 index_content_col_down'>
+<h2>Цена доступна каждому</h2>
+<h3 class = 'h3my'>7 комнат с эклюзивным дизайном</h3>
+
+<span class = 'websymbol'>%</span>
+
+
+
+<ul class = 'ca-menu2'>
+	<li>
+		<a href = "">	
+	<span class = 'ca-icon2'>.</span>
+	<div class = 'ca-content2'>
+		<h3 class = 'ca-sub2'><%= @price_vip.cost %>грн/час</h3>
+		<h2 class = 'ca-main2'><%= @price_vip.title %></h2>
+		<h3 class = 'ca-sub2'><%= @price_vip.description%></h3>
+		
+	</div>	
+	</a>
+	</li>
+<li>
+	<a href = "">	
+<span class = 'ca-icon2'>UU</span>
+<div class = 'ca-content2'>
+	<h3 class = 'ca-sub2'><%= @price1.cost %>грн/час</h3>
+	<h2 class = 'ca-main2'><%= @price1.title %></h2>
+	<h3 class = 'ca-sub2'><%= @price1.description%></h3>
+</div>	
+</a>
+</li>
+<li>
+	<a href = "">	
+<span class = 'ca-icon2'>U+UU</span>
+<div class = 'ca-content2'>
+	<h3 class = 'ca-sub2'><%= @price2.cost %>грн/час</h3>
+	<h2 class = 'ca-main2'><%= @price2.title %></h2>
+	<h3 class = 'ca-sub2'><%= @price2.description%></h3>
+</div>	
+</a>
+</li>
+<li>
+	<a href = "">	
+<span class = 'ca-icon2'>UU+UU</span>
+<div class = 'ca-content2'>
+	<h3 class = 'ca-sub2'><%= @price3.cost %>грн/час</h3>
+	<h2 class = 'ca-main2'><%= @price3.title %></h2>
+	<h3 class = 'ca-sub2'><%= @price3.description%></h3>
+</div>	
+</a>
+</li>
+</ul>
+</div>
+
+<div class = 'col-lg-4 col-sm-9 col-xs-9 col-md-4 index_content_discount'>
+<h2><span class = 'websymbol'>,</span>
+Получи 10% в подарок с дисконтной картой!</h2>
+<h3>Поиграй 2 часа за одно посещение</h3>
+<%= image_tag('ps3.jpg',class:'img-responsive')%>
+</div>
+<div class = 'col-lg-4 col-sm-9 col-xs-9 col-md-4 index_content_bottom'>
+<h2><span class = 'websymbol'>B</span>
+Играй ONLINE в любимые игры!</h2>
+<h3>лицензионные онлайн игры ждут тебя</h3>
+<%= image_tag('ps3gta.jpg',class:'img-responsive')%>
+</div>
+	
+</div>
+<div class = 'row'>
+<div class = 'col-lg-12 col-md-12 col-xs-12 col-sm-12 footer'>
+<h5 class = 'text-center'>©PS3club 2013</h5>
+<div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12 tags'><p class = 'tags-footer'>Облако тегов</p>
+<p>playstation3 PS3 playstation </p>
+<p>ps3club playstation club psclub</p>
+<p>playstation харьков клуб </p>
+<p>псклуб пс3клуб psclub kharkov</p>
+<p>консоль консольный клуб </p>
+<p>игры харьков игротека</p>
+</div>
+
+
+<div class = 'col-lg-4 col-md-4 col-xs-12 col-sm-4 contacts'>
+<p class = 'tags-footer'>Контакты</p>
+<p>(097)-62-192-13</p><p> (063)-789-58-98</p><p>Харьков</p><p>Тринклера 24</p>
+</div>
+
+
+</div>
+</div>
+

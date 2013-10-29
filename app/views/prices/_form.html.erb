@@ -1,0 +1,9 @@
+<%= form_for @price do |f| %>
+		<%= f.label 'заголовок для цены'%>
+		<%= f.text_field :title %>
+		<%= f.label 'Описание' %>
+		<%= f.text_area :description %>
+		<%= f.label 'Цена' %>
+		<%= f.text_field :cost %>
+		<%= f.submit%>
+	<%end%>
