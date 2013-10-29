@@ -3,30 +3,33 @@
 	margin: 10px;
 	margin-left: 70px;
 	float: left;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 
 
 .news_col h2 {
 	font-size: 18px;
-	font-family: 'Cuprum';
 }
 .news_col h4 {
 	font-size: 20px;
-		font-family: 'Cuprum';
+	
 	
 }
 .news_col img {
 	
 }
 .news_col p {
-	font-family: 'Cuprum';
 	font-size: 16px;
+		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	
 }
 .news_col img:hover {
 	opacity: 0.7;
 }
 
 .news_show {
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
 	background: #fff;
 	margin: 0 auto;
 	padding:  20px;
@@ -37,11 +40,11 @@
 .news_show h2 {
 	font-size: 22px;
 	text-align: left;
-	font-family: 'Cuprum';
 }
 .news_show p {
-font-family:  'Cuprum' !important;
 font-size : 18px !important;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
 }
 .news_show img {
 	margin: auto;
