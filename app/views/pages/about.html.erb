@@ -1,10 +1,59 @@
 <%= render 'layouts/google.html.erb'%>
 <%= provide :title, 'О нас'%>
-<div class = 'row'>
-	<div class = 'col-lg-12 col-md-12 col-xs-12 about'>
-<!-- Save for Web Slices (Untitled-1) -->
-<%= image_tag('about.png', class: 'img-responsive aboutpage')%>
-<!-- End Save for Web Slices -->
-<br>
-</div>
+
+<div id = 'about'>
+	<div class = 'container'>
+	<div class = 'row'>
+	
+		<div class = 'col-sm-12 col-lg-12'>
+		
+			<h2>О нас</h2>
+			<hr>
+		
+		</div>
+		
+		<div class = 'col-sm-12 col-lg-12 about_head'>
+			<h3>Первый в Харькове</h3>
+			<h1>Playstation3 Club</h1>
+			<hr>
+		</div>
+		
+			<div class="col-lg-6 col-sm-6 about_content_left">
+				<h1>Огромный V.I.P зал</h1>	
+				 <h3>диагональ экрана 2.5м!</h3>
+				 <%= image_tag('vip.jpg', class: 'img-responsive')%>
+			</div>
+			
+			<div class = 'col-lg-6 col-sm-6 about_content_right'>
+				<h1>7 комнат эклюзивного дизайна</h1>
+				<h3>40" - 46" плазменные телевизоры</h3>
+				<h3>объемный звук</h3>
+				<%= image_tag('auto.png',class:'img-responsive')%>
+				<%= image_tag('boxing.png',class:'img-responsive')%>
+				
+			</div>
+		
+	
+	</div>
+	
+	<div class = 'row'>
+		
+		
+		<div class = 'col-lg-6 col-sm-6 about_content_2_left'>
+		
+			<h1>Мы расположены в самом центре города</h1>
+		    <%= image_tag('strelka.jpg', class: 'img-responsive')%>
+		</div>
+		<div class = 'col-lg-6 col-sm-6 about_content_2_right'>
+		
+			<h1>Комфортные игровые комнаты</h1>
+			<h3>самые новые игровые приставки</h3>
+			<%= image_tag('gamers.jpg', class: 'img-responsive')%>
+		
+		</div>
+		
+	</div>
+	
+	</div>
+	
 </div>

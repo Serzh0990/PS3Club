@@ -24,10 +24,6 @@ a:hover {
 	color: #000;
 	text-decoration: none;
 }
-.about {
-	margin: auto;
-	margin-left: 100px;
-}
 
 .price_col {
 	background: #fff;
@@ -74,3 +70,127 @@ a:hover {
 margin: 0 auto;
 padding: 0;
 }
+
+#about {
+	background: #fff;
+	color: #8f8f8f;
+	min-height: 1120px;
+}
+#about h2 {
+	font-size: 2em;
+	color:  #000;
+}
+
+
+.about_head {
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.about_head h1 {
+	font-size: 4em;
+	text-align: center;
+	color: #000;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.about_head h3 {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 auto;
+}
+
+.about_content_left {
+	text-align: center;
+	padding-top: 15px;
+	
+}
+.about_content_left h1 {
+	font-size: 2em;
+	margin: 0 auto;
+	color: #000;
+	text-transform: uppercase;
+}
+.about_content_left h3 {
+	font-size:  1.2em;
+	margin: 0 auto;
+}
+.about_content_left img {
+	padding-top: 10px;	
+	margin: 0 auto;
+	box-shadow: 3px 2px 1px #acaca3;
+}
+
+
+.about_content_right {
+	text-align: center;
+	padding-top: 15px;
+}
+.about_content_right h1 {
+	font-size: 2em;
+	margin: 0 auto;
+	color: #000;
+	text-transform: uppercase;
+}
+.about_content_right h3 {
+	font-size:  1.2em;
+	margin: 0 auto;
+}
+.about_content_right img {
+	padding-top: 10px;
+	display: inline;
+	margin: 0 auto;
+	
+	
+}
+
+
+.about_content_2_left {
+	text-align: center;
+	padding-top: 15px;
+	
+}
+.about_content_2_left h1 {
+	font-size: 1.6em;
+	margin: 0 auto;
+	color: #000;
+	text-transform: uppercase;
+}
+.about_content_2_left h3 {
+	font-size:  1.6em;
+	margin: 0 auto;
+}
+.about_content_2_left img {
+	padding-top: 10px;
+	display: inline;
+	margin: 0 auto;
+		box-shadow: 3px 2px 1px #acaca3;
+	
+	
+}
+
+.about_content_2_right {
+	text-align: center;
+	padding-top: 15px;
+	
+}
+.about_content_2_right h1 {
+	font-size: 1.6em;
+	margin: 0 auto;
+	color: #000;
+	text-transform: uppercase;
+}
+.about_content_2_right h3 {
+	font-size:  1.3em;
+	margin: 0 auto;
+}
+.about_content_2_right img {
+	padding-top: 10px;
+	display: inline;
+	margin: 0 auto;
+		box-shadow: 3px 2px 1px #acaca3;
+	
+	
+}
+
+
+
