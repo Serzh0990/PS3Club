@@ -4,21 +4,19 @@ meta :title => "Playstation3 club Харьков",
      :keywords => %w(ps3club psclub харьков)
 %>
 <%= render 'layouts/google.html.erb' %>
-
-<div class = 'row'>
-<div class = 'col-md-12 col-sm-12 col-lg-12  main_index_col'>
+<div class = 'col-md-12 col-sm-12 col-xs-12 main_index_col'>
 <h1>Playstation3 Club </h1>
 <h2>Так вы еще не отдыхали</h2>
 </div>
 
-<%= render 'layouts/side_col'%>
+<div class = 'row'>
+<div class = 'col-lg-9 col-md-8 col-sm-12 col-xs-12 index_content_col'>
 
-<div class = 'col-lg-9 col-sm-6 col-xs-12 col-md-6 index_content_col'>
 <span class = 'websymbol'>h</span><h2>Самые новые игры</h2>
 <h3>У нас доступно более 200 игр в которые вы можете поиграть.</h3>
 
 <div class="view view-tenth">
-                <%= image_tag('bg.jpg',class: 'img-responsive')%>
+                <%= image_tag('bg.jpg')%>
                 <div class="mask">
                     <h2>GTA V: Уже у нас</h2>
                     <p>Хит года!У нас вы можете играть в online! Игра Grand Theft Auto 5 установлена на каждой приставке.
@@ -38,13 +36,16 @@ meta :title => "Playstation3 club Харьков",
                     <h2>PES 13</h2>
                     <p>FullControl — обеспечивает полную свободу перемещения по виртуальному футбольному полю, возможность варьировать стиль первого касания и «вручную» управлять передачей мяча и... </p>
                 </div>
+                
             </div>
             
 </div>
 
-<div class = 'col-lg-9 col-sm-10 col-xs-10	 col-md-10 index_content_col_down'>
+<%= render 'layouts/side_col'%>
+
+<div class = 'col-lg-9 col-md-8 col-sm-12 col-xs-12 index_content_col_down'>
 <h2>Цена доступна каждому</h2>
-<h3 class = 'h3my'>7 комнат с эклюзивным дизайном</h3>
+<h3 class = 'h3my'>7 комнат с эксклюзивным дизайном</h3>
 
 <span class = 'websymbol'>%</span>
 
@@ -93,15 +94,17 @@ meta :title => "Playstation3 club Харьков",
 </a>
 </li>
 </ul>
+
 </div>
 
-<div class = 'col-lg-4 col-sm-9 col-xs-9 col-md-4 index_content_discount'>
+<div class="row">
+<div class = ' col-lg-4 col-md-6 col-xs-12 col-sm-6 index_content_discount'>
 <h2><span class = 'websymbol'>,</span>
 Получи 10% в подарок с дисконтной картой!</h2>
 <h3>Поиграй 2 часа за одно посещение</h3>
 <%= image_tag('ps3.jpg',class:'img-responsive')%>
 </div>
-<div class = 'col-lg-4 col-sm-9 col-xs-9 col-md-4 index_content_bottom'>
+<div class = 'col-lg-4 col-md-6 col-xs-12 col-sm-6 index_content_bottom'>
 <h2><span class = 'websymbol'>B</span>
 Играй ONLINE в любимые игры!</h2>
 <h3>лицензионные онлайн игры ждут тебя</h3>
@@ -109,5 +112,3 @@ meta :title => "Playstation3 club Харьков",
 </div>
 	
 </div>
-
-
