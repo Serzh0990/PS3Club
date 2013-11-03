@@ -28,6 +28,7 @@ VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "350", color1: 'FF
 <% if user_signed_in? %>
 <h2 class="text-center">Добро пожаловать</h2>
 <h3 class="text-center">Вы вошли как <strong><%= link_to current_user.email, user_registration_path%></strong></h3>
+<h3 class = 'text-center'><%= link_to 'Добавить новость', new_news_path if current_user.admin?%></h3>
 <h3 class = 'text-center'><%= link_to 'Изменить цены', prices_path if current_user.admin?%></h3>
 <h3 class = 'text-center'><%= link_to 'Выйти' , destroy_user_session_path , :method => :delete if user_signed_in?%></h3>
 
